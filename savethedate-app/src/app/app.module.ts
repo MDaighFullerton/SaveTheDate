@@ -6,18 +6,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TopnavMenuComponent } from './topnav-menu/topnav-menu.component';
+import { FooterComponent } from './footer/footer.component';
+import { EventInfoComponent } from './event-info/event-info.component';
+import { SendEmailComponent } from './send-email/send-email.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
-      TopnavMenuComponent
+      TopnavMenuComponent,
+      FooterComponent,
+      EventInfoComponent,
+      SendEmailComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
       RouterModule.forRoot([
-        { path: '', component: HomeComponent, pathMatch: 'full' }
+        { path: '', component: HomeComponent, pathMatch: 'full' },
+        { path: 'event-info', component: EventInfoComponent, pathMatch: 'full' },
+        { path: 'send-email', component: SendEmailComponent, pathMatch: 'full' }
       ])
    ],
    providers: [],
