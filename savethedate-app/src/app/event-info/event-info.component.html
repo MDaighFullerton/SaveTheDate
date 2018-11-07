@@ -1,19 +1,16 @@
 <div class="container">
   <div class="event-container">
     <form>
-      <div id="fromEmail">
-        <label for="fromEmailInput" id="fromEmailLabel">From Email</label>
-        <input type="email" id="fromEmailInput">
-      </div>
+      <mat-form-field id="fromEmail">
+        <input matInput placeholder="From Email">
+      </mat-form-field>
       <div id="name">
-        <div id="firstName">
-          <label for="firstNameInput" id="firstNameLabel">Fist Name</label>
-          <input type="text" id="firstNameInput">
-        </div>
-        <div id="lastName">
-          <label for="lastNameInput" id="lastNameLabel">Last Name</label>
-          <input type="text" id="lastNameInput">
-        </div>        
+        <mat-form-field>
+          <input matInput placeholder="First Name" id="firstName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last Email" id="lastName">
+        </mat-form-field>
       </div>
       <div id="subject">
         <label for="subjectInput" id="subjectLabel">Email Subject</label>
