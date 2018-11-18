@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { TopnavMenuComponent } from './topnav-menu.component';
+import { TemplatesComponent } from './templates.component';
 
-describe('TopnavMenuComponent', () => {
-  let component: TopnavMenuComponent;
-  let fixture: ComponentFixture<TopnavMenuComponent>;
+describe('TemplatesComponent', () => {
+  let component: TemplatesComponent;
+  let fixture: ComponentFixture<TemplatesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopnavMenuComponent ]
+      declarations: [ TemplatesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopnavMenuComponent);
+    fixture = TestBed.createComponent(TemplatesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -26,5 +26,3 @@ describe('TopnavMenuComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-

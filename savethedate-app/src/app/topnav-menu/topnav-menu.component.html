@@ -1,6 +1,20 @@
-<nav>
-  <ul>
-    <li>Test</li>
-    <li>Test</li>
-  </ul>
-</nav>
+<div class="container">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item [routerLink]="['/event-info']" routerLinkActive="router-link-active" > 
+      <mat-icon>mail</mat-icon>
+      <span>Get Started</span>
+    </button>
+    <button mat-menu-item [routerLink]="['/templates']" routerLinkActive="router-link-active" > 
+      <mat-icon>file</mat-icon>
+      <span>Templates</span>
+    </button>
+  </mat-menu>  
+</div>
+

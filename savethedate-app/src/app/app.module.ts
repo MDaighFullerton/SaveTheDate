@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule, MatMenuModule, MatToolbarModule, MatIconModule} from '@angular/material';
+import { MatGridListModule} from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +14,7 @@ import { TopnavMenuComponent } from './topnav-menu/topnav-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventInfoComponent } from './event-info/event-info.component';
 import { SendEmailComponent } from './send-email/send-email.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
    declarations: [
@@ -19,7 +23,8 @@ import { SendEmailComponent } from './send-email/send-email.component';
       TopnavMenuComponent,
       FooterComponent,
       EventInfoComponent,
-      SendEmailComponent
+      SendEmailComponent,
+      TemplatesComponent
    ],
    imports: [
       BrowserModule,
@@ -27,16 +32,25 @@ import { SendEmailComponent } from './send-email/send-email.component';
       RouterModule.forRoot([
         { path: '', component: HomeComponent, pathMatch: 'full' },
         { path: 'event-info', component: EventInfoComponent, pathMatch: 'full' },
-        { path: 'send-email', component: SendEmailComponent, pathMatch: 'full' }
+        { path: 'send-email', component: SendEmailComponent, pathMatch: 'full' },
+        { path: 'templates', component: TemplatesComponent, pathMatch: 'full'}
       ]),
       BrowserAnimationsModule,
       MatButtonModule,
       MatCheckboxModule,
-      MatInputModule
+      MatInputModule,
+      MatMenuModule,
+      MatGridListModule,
+      FlexLayoutModule,
+      MatToolbarModule,
+      MatIconModule
    ],
    providers: [],
    bootstrap: [
       AppComponent
+   ],
+   exports: [
+      MatIconModule
    ]
 })
 export class AppModule { }

@@ -1,3 +1,18 @@
-<p>
-  home works!
-</p>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <mat-icon class="purple1">looks_one</mat-icon>
+    <p class="font-roboto">Enter your basic event information to let your guests know about your awesome event.</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-icon class="purple1">looks_two</mat-icon>
+    <p class="font-roboto">Browse our various templates and pick the most relevant to your event. </p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-icon class="purple1">looks_3</mat-icon>
+    <p class="font-roboto">Finally, enter all of your recipients email address and send the e-invite!</p>
+  </mat-grid-tile>
+  <mat-grid-tile [routerLink]="['/event-info']" routerLinkActive="router-link-active" class="border-purple" >
+      <mat-icon class="purple1">looks_4</mat-icon>
+      <p class="font-roboto">Ready? Let's get started!</p>
+  </mat-grid-tile>
+</mat-grid-list>
