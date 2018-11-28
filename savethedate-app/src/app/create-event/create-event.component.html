@@ -1,0 +1,14 @@
+<mat-horizontal-stepper class="container" fxFlex.md="80" fxFlex.gt-md="60" #stepper>
+  <mat-step [stepControl]="eventInfoForm">
+    <ng-template matStepLabel>Event Information</ng-template>
+    <app-event-info></app-event-info>
+  </mat-step>
+  <!-- <mat-step [stepControl]="emailTemplateForm">
+      <ng-template matStepLabel>Email Template</ng-template>
+      <step-two-component></step-two-component>
+    </mat-step> -->
+  <mat-step [stepControl]="sendEmailForm">
+    <ng-template matStepLabel>Send Email</ng-template>
+    <app-send-email></app-send-email>
+  </mat-step>
+</mat-horizontal-stepper>

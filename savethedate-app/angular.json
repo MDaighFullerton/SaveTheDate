@@ -133,5 +133,10 @@
       }
     }
   },
-  "defaultProject": "savethedate-app"
+  "defaultProject": "savethedate-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
