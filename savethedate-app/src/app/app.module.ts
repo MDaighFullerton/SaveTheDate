@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatInputModule,
   MatFormFieldModule, MatIconModule, MatGridListModule,
-  MatStepperModule } from '@angular/material';
+  MatStepperModule, MatSnackBarModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -46,7 +46,8 @@ import { CreateEventComponent } from './create-event/create-event.component';
       FormsModule,
       ReactiveFormsModule,
       MatStepperModule,
-      FlexLayoutModule
+      FlexLayoutModule,
+      MatSnackBarModule
    ],
    providers: [],
    bootstrap: [

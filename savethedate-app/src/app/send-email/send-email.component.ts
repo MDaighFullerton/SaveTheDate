@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChildren, ElementRef, QueryList, ApplicationRef, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-send-email',
@@ -21,7 +22,15 @@ export class SendEmailComponent implements OnInit {
     this.emailToArray.removeAt(index);
   }
 
-  constructor(private ref: ChangeDetectorRef) {
+  openSnackBar() {
+    if (this.sendEmailForm.valid) {
+      this.snackBar.open('Sent email successfully!', '', {
+        duration: 1000,
+      });
+    }
+  }
+
+  constructor(private ref: ChangeDetectorRef, public snackBar: MatSnackBar) {
     this.sendEmailForm = new FormGroup({});
   }
 
