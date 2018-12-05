@@ -1,43 +1,94 @@
-<div class="container">
-  <div class="event-container">
-    <form>
-      <mat-form-field id="fromEmail">
-        <input matInput placeholder="From Email">
-      </mat-form-field>
-      <div id="name">
-        <mat-form-field>
-          <input matInput placeholder="First Name" id="firstName">
+<div class="container" fxFlex.xs="90" fxFlex.sm="75" fxFlex.md="60" fxFlex.gt-md="60">
+  <form [formGroup]="eventInfoForm">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Email Information</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div id="fromEmail">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="From Email" formControlName="email" required>
+            <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="email.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div id="name">
+          <mat-grid-list cols="2" rowHeight="60px" gutterSize="10px">
+            <mat-grid-tile>
+              <mat-form-field class="full-width">
+                <input matInput placeholder="First Name" id="firstNameInput" formControlName="firstName" required>
+                <mat-error *ngIf="firstName.hasError('required')">
+                  First name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Last Name" id="lastNameInput" formControlName="lastName" required>
+                <mat-error *ngIf="lastName.hasError('required')">
+                  Last name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div id="subject">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Email Subject" id="subjectInput" formControlName="subject" required>
+            <mat-error *ngIf="subject.hasError('required')">
+              Subject is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Event Location</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Address" id="addressInput" formControlName="address" required>
+          <mat-error *ngIf="address.hasError('required')">
+            Address is <strong>required</strong>
+          </mat-error>
         </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Last Email" id="lastName">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Address 2" id="address2Input">
         </mat-form-field>
-      </div>
-      <div id="subject">
-        <label for="subjectInput" id="subjectLabel">Email Subject</label>
-        <input type="text" id="subjectInput">
-      </div>
-      <div id="location">
-        <div id="address1">
-          <label for="address1Input" id="address1Label">Address 1</label>
-          <input type="text" id="address1Input">
-        </div>
-        <div id="address2">
-          <label for="address2Input" id="address2Label">Address 2</label>
-          <input type="text" id="address2Input">
-        </div>
-        <div id="city">
-          <label for="cityInput" id="cityLabel">City</label>
-          <input type="text" id="cityInput">
-        </div>
-        <div id="state">
-          <label for="stateInput" id="stateLabel">State</label>
-          <input type="text" id="stateInput">
-        </div>
-        <div id="zip">
-          <label for="zipInput" id="zipLabel">Zip</label>
-          <input type="text" id="zipInput">
-        </div>
-      </div>
-    </form>
-  </div>
+        <mat-grid-list cols="3" rowHeight="60px" gutterSize="10px">
+          <mat-grid-tile>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="City" id="cityInput" formControlName="city" required>
+              <mat-error *ngIf="city.hasError('required')">
+                City is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="State" id="stateInput" formControlName="state" required>
+              <mat-error *ngIf="state.hasError('required')">
+                State is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Zip" id="zipInput" maxlength="5" formControlName="zip" required>
+              <mat-hint align="end">{{zip.value.length}} / 5</mat-hint>
+              <mat-error *ngIf="zip.hasError('required')">
+                Zip is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+    </mat-card>
+    <button mat-raised-button matStepperNext class="mat-accent pull-right">Next</button>
+  </form>
 </div>

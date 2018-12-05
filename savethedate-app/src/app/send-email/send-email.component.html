@@ -1,3 +1,25 @@
-<p>
-  send-email works!
-</p>
+<div class="container" fxFlex.xs="90" fxFlex.sm="75" fxFlex.md="60" fxFlex.gt-md="60">
+  <form [formGroup]="sendEmailForm">
+    <div fxLayout="column" formArrayName="emailToArray">
+      <div fxLayout="row" *ngFor="let email of emailToArray.controls; let i = index; let l = last">
+        <mat-form-field fxFlex="80">
+          <input matInput placeholder="Email To #{{i+1}}" [formControlName]="i">
+          <mat-error *ngIf="emailToArray.controls[i].hasError('email') && !emailToArray.controls[i].hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailToArray.controls[i].hasError('required')">
+            At least one email to is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <div fxFlex="20" fxLayoutAlign="center center" *ngIf="i + 1 === emailToArray.length">
+          <button mat-raised-button (click)="AddEmailTo()" style="font-size: 20px;">+</button>
+        </div>
+        <div fxFlex="20" fxLayoutAlign="center center" *ngIf="i + 1 !== emailToArray.length">
+          <button mat-raised-button (click)="RemoveEmailTo(i)" style="font-size: 20px;">-</button>
+        </div>
+      </div>
+    </div>
+    <button type="button" mat-raised-button matStepperPrevious class="mat-primary">Back</button>
+    <button type="submit" mat-raised-button class="mat-accent pull-right" (click)="openSnackBar()">Send Email</button>
+  </form>
+</div>

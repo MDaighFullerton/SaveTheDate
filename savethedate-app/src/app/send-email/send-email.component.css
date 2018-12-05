@@ -1,0 +1,8 @@
+.container {
+    margin: 0px auto 20px auto;
+    overflow: auto;
+}
+
+.pull-right {
+    float: right;
+}

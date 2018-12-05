@@ -1,4 +1,24 @@
-.event-container {
-    text-align: center;
-    margin: auto;
+.container {
+    margin: 0px auto 20px auto;
+    overflow: auto;
+}
+
+::ng-deep .mat-card-header-text {
+    margin: 0px!important;
+}
+
+::ng-deep .mat-horizontal-content-container {
+    padding: 0px!important;
+}
+
+.mat-card {
+    margin: 20px 0px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.pull-right {
+    float: right;
 }
