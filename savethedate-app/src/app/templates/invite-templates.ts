@@ -1,4 +1,4 @@
-export class InviteTemplates {
+export interface InviteTemplates {
     id: number;
     info: {
         firstName: string;

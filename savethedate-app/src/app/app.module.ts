@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatInputModule,
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule,
   MatFormFieldModule, MatIconModule, MatGridListModule,
-  MatStepperModule, MatSnackBarModule } from '@angular/material';
+  MatStepperModule, MatSnackBarModule , MatMenuModule, MatToolbarModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { EventInfoComponent } from './event-info/event-info.component';
 import { SendEmailComponent } from './send-email/send-email.component';
 import { CreateEventComponent } from './create-event/create-event.component';
+import { templateSourceUrl } from '@angular/compiler';
+import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +27,8 @@ import { CreateEventComponent } from './create-event/create-event.component';
       FooterComponent,
       EventInfoComponent,
       SendEmailComponent,
-      CreateEventComponent
+      CreateEventComponent,
+      TemplatesComponent
    ],
    imports: [
       BrowserModule,
@@ -34,7 +37,8 @@ import { CreateEventComponent } from './create-event/create-event.component';
         { path: '', component: HomeComponent, pathMatch: 'full' },
         { path: 'event-info', component: EventInfoComponent, pathMatch: 'full' },
         { path: 'send-email', component: SendEmailComponent, pathMatch: 'full' },
-        { path: 'create-event', component: CreateEventComponent, pathMatch: 'full' }
+        { path: 'create-event', component: CreateEventComponent, pathMatch: 'full' },
+        { path: 'templates', component: TemplatesComponent, pathMatch: 'full'}
       ]),
       BrowserAnimationsModule,
       MatButtonModule,
@@ -43,6 +47,9 @@ import { CreateEventComponent } from './create-event/create-event.component';
       MatFormFieldModule,
       MatIconModule,
       MatGridListModule,
+      MatMenuModule,
+      MatCheckboxModule,
+      MatToolbarModule,
       FormsModule,
       ReactiveFormsModule,
       MatStepperModule,
