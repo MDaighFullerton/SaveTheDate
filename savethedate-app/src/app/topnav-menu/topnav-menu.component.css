@@ -1,0 +1,6 @@
+.fixed-header {
+    top: 0;
+    position: fixed;
+    z-index:999;
+  
+  }

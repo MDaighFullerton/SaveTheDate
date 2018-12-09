@@ -1,5 +1,5 @@
 <div class="container" fxFlex.xs="90" fxFlex.sm="75" fxFlex.md="60" fxFlex.gt-md="60">
-  <form [formGroup]="eventInfoForm">
+  <form [formGroup]="eventInfoForm" (ngSubmit)="form1()">
     <mat-card>
       <mat-card-header>
         <mat-card-title>Email Information</mat-card-title>

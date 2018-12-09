@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { InviteTemplates } from '../templates/invite-templates';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { EventInfoComponent } from '../event-info/event-info.component';
+import { InviteTemplates } from './templateModel';
+import { InfoModel } from '../event-info/infoModel';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+// import { userInfo } from 'os';
 
 @Component({
   selector: 'app-templates',
@@ -7,31 +11,39 @@ import { InviteTemplates } from '../templates/invite-templates';
   styleUrls: ['./templates.component.css']
 })
 export class TemplatesComponent implements OnInit {
-  /*Invite test templates */
-  // info: object;
-  // firstName: string;
-  // lastName: string;
-  // id: number;
-  // eventTitle: string;
-  // eventLocation: string;
-  // empList: Array<InviteTemplates> = [];
-  // const listOfInvite: InviteTemplates[] = [this.inviteOne, this.inviteTwo, this.inviteThree];
+  // @ViewChild(EventInfoComponent) child: EventInfoComponent;
+  @ViewChild(EventInfoComponent, {read: 'emailProvider'}) emailStuff: string;
+  showAlert() {
+    // this.alert.lastName();
+    // console.log('sss', this.child.eventInfoForm);
+    // window.alert('show alert', this.eventInfoForm.value.email);
+    console.log('call get', this.emailStuff);
+  }
+  // InfoModel: any;
+  // eventInfoForm: FormGroup;
   constructor() {}
-
   ngOnInit() {
     console.log('init template');
-    const invite: InviteTemplates = {
-      id: 1,
-      info: {
-        firstName: 'andre',
-        lastName: 'ho',
-        eventLocation: 'sdd',
-        eventTitle: 'dsd'
-      }
-    };
-    console.log('invite model', invite);
-
+    // console.log('getting info model');
+    // const invite: InviteTemplates = {
+    //   id: 1,
+    //   info: {
+    //     firstName: 'andre',
+    //     lastName: 'ho',
+    //     eventLocation: 'sdd',
+    //     eventTitle: 'dsd'
+    //   }
+    // };
+    // console.log('invite model', invite);
+    console.log('from step 1', );
+    // this.eventInfoForm = this._formBuilder.group({
+    //   email: ['', Validators.required]
+    // });
+    // console.log('dddd', this.eventInfoForm.value);
     /*create the template here*/
   }
+  // get email() { return this.eventInfoForm.get('email'); }
+  onClickMe() {
+    // console.log('from 1', this.InfoModel.firstName);
+  }
 }
-
