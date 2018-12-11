@@ -4,7 +4,7 @@ import {MatCardModule} from '@angular/material/card';
 
 
 
-@Component({
+  @Component({
   selector: 'app-templates',
   templateUrl: './templates.component.html',
   styleUrls: ['./templates.component.css']
