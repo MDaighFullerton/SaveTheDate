@@ -1,0 +1,50 @@
+<mat-grid-list cols="2" rowHeight="1:1" class="template">
+  <mat-grid-tile class="purple-gradient">
+    <div layout='row' layout-xs="column" class="template">
+      <h1>You are invited to {{ data.subject }}!</h1>
+      <p>Host: {{data.firstName}}, {{data.lastName}}</p>
+      <p>Location: {{data.address}}, {{data.city}}, {{data.state}} {{data.zip}}</p>
+      <mat-grid-tile-footer><mat-checkbox>Select me!</mat-checkbox></mat-grid-tile-footer>
+    </div>    
+  </mat-grid-tile>
+  <mat-grid-tile class="pineapple-bg">
+    <div layout='row' layout-xs="column" class="template">
+      <h1>You are invited to {{ data.subject }}!</h1>
+      <p>Host: {{data.firstName}}, {{data.lastName}}</p>
+      <p>Location: {{data.address}}, {{data.city}}, {{data.state}} {{data.zip}}</p>     
+    </div>
+    <mat-grid-tile-footer><mat-checkbox>Select me!</mat-checkbox></mat-grid-tile-footer>
+  </mat-grid-tile>
+  <!--<mat-grid-tile class="purple-bg">
+    <p>3</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <p>4</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <p>5</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="purple-bg">
+    <p>6</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <p>7</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="purple-bg">
+    <p>8</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="purple-bg">
+    <p>9</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <p>10</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="purple-bg">
+    <p>11</p>
+  </mat-grid-tile>                                          
+  <mat-grid-tile>
+    <p>12</p>
+  </mat-grid-tile> -->
+</mat-grid-list>
+<button type="button" mat-raised-button matStepperPrevious class="mat-primary">Back</button>
+<button mat-raised-button matStepperNext class="mat-accent pull-right">Next</button>
