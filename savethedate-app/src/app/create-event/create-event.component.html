@@ -5,7 +5,7 @@
   </mat-step>
   <mat-step [stepControl]="emailTemplateForm">
       <ng-template matStepLabel>Email Template</ng-template>
-      <app-templates></app-templates>
+      <app-templates [data]="eventInfoForm.value"></app-templates>
     </mat-step>
   <mat-step [stepControl]="sendEmailForm">
     <ng-template matStepLabel>Send Email</ng-template>

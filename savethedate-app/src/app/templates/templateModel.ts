@@ -1,9 +1,6 @@
+import { InfoModel } from '../event-info/infoModel';
+
 export interface InviteTemplates {
     id: number;
-    info: {
-        firstName: string;
-        lastName: string;
-        eventTitle: string;
-        eventLocation: string;
-    };
+    info: InfoModel;
 }

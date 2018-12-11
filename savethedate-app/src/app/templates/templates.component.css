@@ -1,3 +1,45 @@
+.template {
+    margin: 10px;
+}
 .purple-bg {
     background-color:#bf8bff;
+}
+.purple-gradient {
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+
+}
+.pineapple-bg {
+    background:
+	/* Pineapple details */
+	radial-gradient(circle closest-side at 50px 50px, #FB8B24 3px, transparent 0),
+	radial-gradient(circle closest-side at 40px 60px, #FB8B24 3px, transparent 0),
+	radial-gradient(circle closest-side at 60px 60px, #FB8B24 3px, transparent 0),
+	radial-gradient(circle closest-side at 50px 70px, #FB8B24 3px, transparent 0),
+	
+	radial-gradient(circle closest-side at 150px 165px, #FB8B24 3px, transparent 0),
+	radial-gradient(circle closest-side at 140px 175px, #FB8B24 3px, transparent 0),
+	radial-gradient(circle closest-side at 160px 175px, #FB8B24 3px, transparent 0),
+	radial-gradient(circle closest-side at 150px 185px, #FB8B24 3px, transparent 0),
+	
+	/* Pineapple base */
+	radial-gradient(ellipse closest-side at 50px 60px, #F9A734 18px, transparent 0),
+	
+	radial-gradient(ellipse closest-side at 150px 175px, #F9A734 18px, transparent 0),
+	
+	/* Pineapple leafs */
+	radial-gradient(circle closest-side at 30px 40px, #F9D8D4 15px, transparent 0),
+	radial-gradient(circle closest-side at 40px 35px, #36964C 15px, transparent 0),
+	radial-gradient(circle closest-side at 70px 40px, #F9D8D4 15px, transparent 0),
+	radial-gradient(circle closest-side at 60px 35px, #286E38 15px, transparent 0),
+	
+	radial-gradient(circle closest-side at 130px 155px, #F9D8D4 15px, transparent 0),
+	radial-gradient(circle closest-side at 140px 150px, #36964C 15px, transparent 0),
+	radial-gradient(circle at 170px 155px, #F9D8D4 15px, transparent 0),
+	radial-gradient(circle at 160px 150px, #286E38 15px, transparent 0)
+	;
+	background-color: #F9D8D4;
+	background-size: 180px 210px;
+	animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
 }

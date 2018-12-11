@@ -18,6 +18,8 @@ import { SendEmailComponent } from './send-email/send-email.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { templateSourceUrl } from '@angular/compiler';
 import { TemplatesComponent } from './templates/templates.component';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
    declarations: [
@@ -54,7 +56,8 @@ import { TemplatesComponent } from './templates/templates.component';
       ReactiveFormsModule,
       MatStepperModule,
       FlexLayoutModule,
-      MatSnackBarModule
+      MatSnackBarModule,
+      MatRadioModule
    ],
    providers: [],
    bootstrap: [

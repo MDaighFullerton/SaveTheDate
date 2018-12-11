@@ -1,5 +1,5 @@
 <div class="container" fxFlex.xs="90" fxFlex.sm="75" fxFlex.md="60" fxFlex.gt-md="60">
-  <form [formGroup]="eventInfoForm" (ngSubmit)="form1()">
+  <form [formGroup]="eventInfoForm">
     <mat-card>
       <mat-card-header>
         <mat-card-title>Email Information</mat-card-title>
@@ -38,7 +38,7 @@
         </div>
         <div id="subject">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Email Subject" id="subjectInput" formControlName="subject" required>
+            <input matInput placeholder="Email Subject (Event Title)" id="subjectInput" formControlName="subject" required>
             <mat-error *ngIf="subject.hasError('required')">
               Subject is <strong>required</strong>
             </mat-error>
