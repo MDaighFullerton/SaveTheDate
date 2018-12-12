@@ -335,6 +335,8 @@ THE SOFTWARE.
 
 @angular/material/snack-bar
 
+@angular/material/grid-list
+
 @angular/flex-layout
 MIT
 The MIT License
@@ -367,11 +369,13 @@ MIT
 
 @angular/material/form-field
 
-@angular/material/grid-list
-
 @angular/material/icon
 
 @angular/material/stepper
+
+@angular/material/checkbox
+
+@angular/material/toolbar
 
 zone.js
 MIT
